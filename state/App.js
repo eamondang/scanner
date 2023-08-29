@@ -37,7 +37,7 @@ function App() {
   }, [])
   //state variables
   return (
-    <div className="content">
+    <div className="">
       <Routes>
         <Route path="/" element={ <Scanner/> } />
       </Routes>
