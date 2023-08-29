@@ -14,8 +14,8 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ToastContainer
-        position="bottom-center"
-        autoClose={5000}
+        position="top-center"
+        autoClose={false}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

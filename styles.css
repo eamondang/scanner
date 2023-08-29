@@ -8,6 +8,10 @@
 }
 :root {
   --font-color: 230 25% 7%;
+  --toastify-toast-min-height: 300px;
+  --toastify-toast-max-height: 800px;
+  --toastify-toast-width: 320px;
+  --toastify-z-index: 9999;
 }
 body {
   color: hsl(var(--font-color));
@@ -23,7 +27,7 @@ img {
   /* display: flex; */
   min-height: 100vh;
   align-items: center;
-  
+
 }
 .content {
   position: absolute;

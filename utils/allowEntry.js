@@ -16,9 +16,8 @@ async function allowEntry({privKey, basePassword}) {
     // Check 1: Key existence
     // If key does not exist, the user should not be admitted
     if(keyInfo == null) {
-      toast(`Key does not exist. Admission denied`, {
-        position: "bottom-center",
-        autoClose: 5000,
+      toast.error(`Key does not exist. Admission denied`, {
+        position: "top-center",
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -34,9 +33,8 @@ async function allowEntry({privKey, basePassword}) {
     // Ticket was already scanned
     if (curUse !== 1) {
       console.log(``);
-      toast(`Key has already been scanned. Admission denied`, {
-        position: "bottom-center",
-        autoClose: 5000,
+      toast.error(`Key has already been scanned. Admission denied`, {
+        position: "top-center",
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -58,9 +56,8 @@ async function allowEntry({privKey, basePassword}) {
     // Check 3: Check if claim was successful by validating that curUse incremented
     keyInfo = await getKeyInformation({publicKey})
     let data = await getDropInformation({dropId: keyInfo.drop_id, secretKey: privKey, publicKey, withKeys: true});
-    toast(`${data.fc.methods[1][0].args} Ticket`, {
-      position: "bottom-center",
-      autoClose: 5000,
+    toast.success(`${data.fc.methods[1][0].args} Ticket! Welcome To NEARAPAC!`, {
+      position: "top-center",
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -70,9 +67,8 @@ async function allowEntry({privKey, basePassword}) {
     })
 
     if (keyInfo.cur_key_use !== 2) {
-      toast(`Claim has failed, check password`, {
-        position: "bottom-center",
-        autoClose: 5000,
+      toast.error(`Claim has failed, check password`, {
+        position: "top-center",
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -83,9 +79,8 @@ async function allowEntry({privKey, basePassword}) {
       return false;
     }
   } catch(err) {
-    toast(`Unknown Error: ${err}. Admission denied`, {
-      position: "bottom-center",
-      autoClose: 5000,
+    toast.error(`Unknown Error: ${err}. Admission denied`, {
+      position: "top-center",
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,

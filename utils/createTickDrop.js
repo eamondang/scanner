@@ -47,7 +47,7 @@ async function createTickDrop() {
   // Create drop with 10 keys and 2 key uses each
   let {keys, dropId} = await createDrop({
     account: fundingAccount,
-    numKeys: 10,
+    numKeys: 5,
     config: {
       usesPerKey: 2
     },
@@ -61,7 +61,7 @@ async function createTickDrop() {
           {
             receiverId: `nft-v2.keypom.${NETWORK_ID}`,
             methodName: "nft_mint",
-            args: "VIP",
+            args: "PREMIUM",
             dropIdField: "mint_id",
             accountIdField: "receiver_id",
             attachedDeposit: parseNearAmount("0.01")
@@ -75,8 +75,8 @@ async function createTickDrop() {
     account: fundingAccount,
     dropId,
     metadata: {
-      title: "VIP TICKET - NEARAPAC 2023",
-      description: "VIP TICKET - NEARAPAC 2023",
+      title: "PREMIUM TICKET - NEARAPAC 2023",
+      description: "PREMIUM TICKET - NEARAPAC 2023",
       media: "https://ticket-nearapac.app/nearapac-nft.png",
       copies: 30
     }

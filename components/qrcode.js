@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 
 const QrCode = ({ link }) => {
@@ -17,6 +16,7 @@ const QrCode = ({ link }) => {
       <div>{qrcode}</div>
     </div>
   );
+
 };
 
 export default QrCode;

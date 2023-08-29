@@ -2,6 +2,7 @@ import React from "react";
 import { useZxing } from "react-zxing";
 import { useState, useEffect } from "react";
 import "../styles.css";
+const { toast } = require("react-toastify");
 import { allowEntry } from "../utils/allowEntry";
 
 export const Scanner = () => {
@@ -76,7 +77,7 @@ export const Scanner = () => {
       }
 
       // Wait 3s, then flip go back to pre-claim
-      await timeout(3000)
+      await timeout(5000)
       setMasterStatus({
         stage: Stage.preClaim,
         data: Data.empty
