@@ -24,7 +24,7 @@ root.render(
         draggable
         pauseOnHover
         theme="dark"
-        style={{width: "600px", fontSize:"40px"}}
+        style={{width: "800px", height: "1500px", fontSize:"80px"}}
       />
       <App />
     </BrowserRouter>

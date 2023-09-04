@@ -47,7 +47,7 @@ async function createTickDrop() {
   // Create drop with 10 keys and 2 key uses each
   let {keys, dropId} = await createDrop({
     account: fundingAccount,
-    numKeys: 5,
+    numKeys: 50,
     config: {
       usesPerKey: 2
     },
