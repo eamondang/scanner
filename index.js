@@ -23,7 +23,7 @@ root.render(
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="dark"
+        theme="colored"
   style={{width: "800px", height: "3000px", fontSize:"120px", textAlign: "center", justifyContent: "center"}}
       />
       <App />

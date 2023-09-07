@@ -23,7 +23,7 @@ async function allowEntry({privKey, basePassword}) {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "dark",
+        theme: "colored",
       })
       return false;
     }
@@ -40,7 +40,7 @@ async function allowEntry({privKey, basePassword}) {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "dark",
+        theme: "colored",
       })
       return false;
     }
@@ -63,7 +63,7 @@ async function allowEntry({privKey, basePassword}) {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "dark",
+      theme: "colored",
     })
 
     if (keyInfo.cur_key_use !== 2) {
@@ -74,7 +74,7 @@ async function allowEntry({privKey, basePassword}) {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "dark",
+        theme: "colored",
       })
       return false;
     }
@@ -86,7 +86,7 @@ async function allowEntry({privKey, basePassword}) {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "dark",
+      theme: "colored",
     })
     return false;
   }
